@@ -2,7 +2,7 @@
 
 ## Integrantes
 - Fuentes Rivera Onofre, Marco Antonio 
-- Davila Mundo, Alexis
+- Davila Mundo, Alexis Jhon Manuel
 - Serrudo Caina, David Andre
 
 ## Objetivo de Desarrollo Sostenible
