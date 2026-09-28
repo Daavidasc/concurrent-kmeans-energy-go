@@ -1,2 +1,18 @@
 notebooks/data/hhblock_dataset/
 notebooks/data/*.csv
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# SPIN / Promela generated files
+pan.c
+pan.h
+pan.b
+pan.m
+pan.p
+pan.t
+pan.exe
