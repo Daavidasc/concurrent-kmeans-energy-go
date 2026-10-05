@@ -3,7 +3,7 @@
 - **Modelo de IA:** Claude Sonnet 5.5 (Anthropic)
 - **Fecha:** 4 de octubre de 2026
 - **Repositorio / commit analizado:** github.com/Daavidasc/concurrent-kmeans-energy-go, `main`, commit `5c69f52`
-- **Entorno de verificación:** Linux, 1 núcleo, Go 1.22 (go.mod ajustado en una copia local), Spin 6.5.2
+- **Reproducción del equipo:** Se reprodujo GAP-01 y GAP-02 con `go test` en Windows (ambos tests fallan, con los mismos mensajes) y verificó el modelo Promela con Spin 6.5.1 (mismos estados y resultados que en el análisis de la IA).
 
 ## Resumen ejecutivo
 El proyecto compila, pasa `go vet` y no presenta data races bajo `go test -race`. El diseño del Worker Pool (buffers locales por bloque y fusión ordenada por ID) es sólido. Las brechas principales son de robustez ante entradas límite (K mayor que las filas, 0 filas, NaN), ausencia de pruebas automatizadas y un modelo Promela cuyas aserciones no podían fallar.
