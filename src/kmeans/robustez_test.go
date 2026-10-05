@@ -5,6 +5,18 @@ import (
 	"time"
 )
 
+/*
+Este archivo contiene pruebas unitarias orientadas a validar casos límite
+y escenarios excepcionales del algoritmo K-Means.
+
+Las pruebas verifican que el sistema gestione correctamente situaciones
+como la inicialización de centroides cuando el valor de K es mayor que la
+cantidad de filas disponibles en el dataset, así como el procesamiento de
+datasets vacíos. El objetivo es garantizar la estabilidad del algoritmo,
+evitando bloqueos, ciclos infinitos o errores inesperados (panic) durante
+la ejecución, especialmente en entornos concurrentes.
+*/
+
 func TestKMayorQueFilas(t *testing.T) {
 	ds := &Dataset{Valores: make([]float32, 3*48), Filas: 3, Features: 48}
 	done := make(chan struct{})
